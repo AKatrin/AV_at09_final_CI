@@ -5,7 +5,10 @@
 plugins {
     id 'java'
     id 'maven-publish'
+    id 'org.sonarqube' version '2.7'
 }
+
+apply plugin: 'java'
 
 repositories {
     mavenLocal()
@@ -27,6 +30,14 @@ group = 'com.microsoft.sampleWebApp'
 version = '1.0'
 description = 'Sample Spring App'
 sourceCompatibility = '1.8'
+
+uploadArchives {
+    repositories {
+       flatDir {
+           dirs 'artifacts'
+       }
+    }
+}
 
 publishing {
     publications {
