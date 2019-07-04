@@ -15,7 +15,7 @@ pipeline {
             }
             post {
                 always {
-                    junit "sampleWebApp/build/reports/tests/test/*.html"
+                    junit "sampleWebApp/build/test-results/test/*.xml"
                     archiveArtifacts 'sampleWebApp/build/reports/tests/test/*'
                 }       
             }
