@@ -1,0 +1,10 @@
+version: '3'
+services:
+  jenkins_server:
+    image: "registry.jala.info/devops/jenkins/jenkins:2.176-jdk11"
+    ports:
+      - "80:8080"
+      - "5000:5000"
+    volumes:
+      - /home/ubuntu/jenkins_home:/var/jenkins_home
+    restart: always
