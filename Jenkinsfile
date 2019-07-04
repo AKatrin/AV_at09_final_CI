@@ -30,8 +30,8 @@ pipeline {
     post {
         success {
             mail to: 'areliez.vargas@gmail.com',
-                subject: "Success Pipeline: ${currentBuild.fullDisplayName}",
-                body: "The build was successful: ${env.BUILD_URL}"
+            subject: "Success Pipeline: ${currentBuild.fullDisplayName}",
+            body: "The build was successful: ${env.BUILD_URL}"
         }
     }
 }
